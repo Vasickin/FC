@@ -23,3 +23,13 @@ for (int i = 0; i < size; i++)
     }
 }
 Console.WriteLine();
+
+// Подсчитываем количество строк, длина которых меньше или равна 3 символам
+int count = 0;
+for (int i = 0; i < size; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        count++;
+    }
+}
