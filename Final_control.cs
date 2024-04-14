@@ -33,3 +33,15 @@ for (int i = 0; i < size; i++)
         count++;
     }
 }
+
+// Создаем новый массив с подходящими строками
+string[] newArray = new string[count];
+int index = 0;
+for (int i = 0; i < size; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[index] = array[i];
+        index++;
+    }
+}
