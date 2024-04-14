@@ -11,3 +11,15 @@ for (int i = 0; i < size; i++)
     Console.WriteLine($"Введите элемент массива {i}:");
     array[i] = Console.ReadLine()!;
 }
+
+// Выводим массив на экран
+Console.Write("Вы ввели следующие элементы: ");
+for (int i = 0; i < size; i++)
+{
+    Console.Write(array[i]);
+    if (i < size - 1)
+    {
+        Console.Write(", ");
+    }
+}
+Console.WriteLine();
