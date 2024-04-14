@@ -45,3 +45,11 @@ for (int i = 0; i < size; i++)
         index++;
     }
 }
+
+// Выводим новый массив на экран
+Console.WriteLine("Новый массив из строк, длина которых меньше или равна 3 символам:");
+for (int i = 0; i < count; i++)
+{
+    Console.WriteLine(newArray[i]);
+}
+
