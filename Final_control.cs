@@ -34,22 +34,30 @@ for (int i = 0; i < size; i++)
     }
 }
 
-// Создаем новый массив с подходящими строками
-string[] newArray = new string[count];
-int index = 0;
-for (int i = 0; i < size; i++)
+// Создаем новый массив с подходящими строками, если такие есть
+if (count > 0)
 {
-    if (array[i].Length <= 3)
+    string[] newArray = new string[count];
+    int index = 0;
+    for (int i = 0; i < size; i++)
     {
-        newArray[index] = array[i];
-        index++;
+        if (array[i].Length <= 3)
+        {
+            newArray[index] = array[i];
+            index++;
+        }
+    }
+
+    // Выводим новый массив на экран
+    Console.WriteLine("Новый массив из строк, длина которых меньше или равна 3 символам:");
+    for (int i = 0; i < count; i++)
+    {
+        Console.WriteLine(newArray[i]);
     }
 }
-
-// Выводим новый массив на экран
-Console.WriteLine("Новый массив из строк, длина которых меньше или равна 3 символам:");
-for (int i = 0; i < count; i++)
+else
 {
-    Console.WriteLine(newArray[i]);
+    Console.WriteLine("В массиве нет строк, длина которых меньше или равна 3 символам.");
 }
+
 
